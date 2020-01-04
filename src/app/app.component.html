@@ -364,10 +364,10 @@
   <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
 
   <p *ngIf="showDetails">This is Detail Display</p>
-  <div *ngFor="let logItem of log"
-  [ngStyle]="{backgroundColor:logItem>5?'blue':'transparent'}"
-  [ngClass]="{'white-color':logItem>5}"
-  >{{logItem}}</div>
+  <div *ngFor="let logItem of log;let i=index"
+  [ngStyle]="{backgroundColor:(i%2==0)?'blue':'transparent'}"
+  [ngClass]="{'white-color':i%2==0,'row':1==1} "
+  >Current Timestamp : {{logItem}}</div>
 
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
