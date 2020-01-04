@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng8';
+  title = 'Passionate Stars';
+  log=[];
+  showDetails = false;
+  onToggleDetails(){
+    this.showDetails=!this.showDetails;
+    this.log.push(this.log.length+1);
+  }
 }
